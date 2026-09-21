@@ -1,0 +1,336 @@
+/* ===========================
+   GOOGLE FONTS
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0b0b0b;
+    color:#fff;
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+    width:100%;
+    max-width:1300px;
+    margin:auto;
+    padding:0 40px;
+}
+section{
+
+    scroll-margin-top:110px;
+
+}
+/* ==========================
+   SCROLL ANIMATION
+========================== */
+
+.hidden{
+
+    opacity:0;
+    transform:translateY(70px);
+    transition:all .9s ease;
+
+}
+
+.show{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
+/* ==========================
+   PROGRESS BAR
+========================== */
+
+#progress-bar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:0%;
+
+    height:4px;
+
+    background:linear-gradient(90deg,#d4af37,#f5d76e);
+
+    z-index:100000;
+
+    transition:width .1s linear;
+
+}
+/* ==========================
+   SCROLL TOP BUTTON
+========================== */
+
+#scrollTopBtn{
+
+    position:fixed;
+
+    right:35px;
+
+    bottom:35px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#d4af37;
+
+    color:#111;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:999;
+
+    box-shadow:0 15px 35px rgba(212,175,55,.35);
+
+}
+
+#scrollTopBtn.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+#scrollTopBtn:hover{
+
+    transform:translateY(-5px);
+
+}
+/*=========================
+FOOTER
+=========================*/
+
+.footer{
+
+background:#080808;
+
+padding:90px 0 0;
+
+border-top:1px solid rgba(212,175,55,.15);
+
+}
+
+.footer-container{
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr;
+
+gap:70px;
+
+}
+
+.footer-box h2{
+
+font-size:38px;
+
+color:#d4af37;
+
+margin-bottom:5px;
+
+font-family:'Cormorant Garamond',serif;
+
+}
+
+.footer-box span{
+
+display:block;
+
+letter-spacing:3px;
+
+color:#fff;
+
+margin-bottom:25px;
+
+}
+
+.footer-box h3{
+
+margin-bottom:25px;
+
+color:#d4af37;
+
+}
+
+.footer-box p{
+
+color:#bfbfbf;
+
+line-height:1.9;
+
+}
+
+.footer-box a{
+
+display:block;
+
+margin-bottom:15px;
+
+color:#bfbfbf;
+
+text-decoration:none;
+
+transition:.35s;
+
+}
+
+.footer-box a:hover{
+
+color:#d4af37;
+
+padding-left:10px;
+
+}
+
+.footer-bottom{
+
+margin-top:70px;
+
+padding:25px;
+
+text-align:center;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+color:#999;
+
+}
+
+@media(max-width:900px){
+
+.footer-container{
+
+grid-template-columns:1fr;
+
+gap:45px;
+
+text-align:center;
+
+}
+
+.footer-box a:hover{
+
+padding-left:0;
+
+}
+
+}
+/*=========================
+WHATSAPP
+=========================*/
+
+.whatsapp-btn{
+
+position:fixed;
+
+right:30px;
+
+bottom:30px;
+
+width:65px;
+
+height:65px;
+
+border-radius:50%;
+
+background:#25D366;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:white;
+
+text-decoration:none;
+
+box-shadow:0 15px 40px rgba(37,211,102,.45);
+
+z-index:999;
+
+transition:.35s;
+
+animation:whatsappPulse 2s infinite;
+
+}
+
+.whatsapp-btn:hover{
+
+transform:scale(1.1);
+
+}
+
+@keyframes whatsappPulse{
+
+0%{
+
+box-shadow:0 0 0 0 rgba(37,211,102,.55);
+
+}
+
+70%{
+
+box-shadow:0 0 0 20px rgba(37,211,102,0);
+
+}
+
+100%{
+
+box-shadow:0 0 0 0 rgba(37,211,102,0);
+
+}
+
+}
+/*=========================
+FOOTER EFFECT
+=========================*/
+
+.footer-box{
+
+transition:.35s;
+
+}
+
+.footer-box:hover{
+
+transform:translateY(-8px);
+
+}

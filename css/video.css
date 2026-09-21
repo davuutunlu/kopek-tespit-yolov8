@@ -1,0 +1,124 @@
+.video-section{
+    padding:160px 0 120px;
+    background:#0d0d0d;
+}
+
+.video-title{
+    text-align:center;
+    font-size:56px;
+    margin-top:15px;
+    margin-bottom:20px;
+    font-family:'Cormorant Garamond',serif;
+    color:#fff;
+}
+
+.video-text{
+    text-align:center;
+    color:#bdbdbd;
+    font-size:18px;
+    max-width:720px;
+    margin:20px auto 70px;
+    line-height:1.8;
+}
+
+.video-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr 1.15fr;
+    gap:35px;
+    align-items:start;
+}
+
+.video-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:22px;
+    background:#171717;
+    border:1px solid rgba(212,175,55,.18);
+    transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+    height:fit-content;
+    will-change: transform;
+}
+
+.video-card:hover{
+    transform:translateY(-8px) scale(1.01);
+    border-color:#d4af37;
+    box-shadow:0 20px 40px rgba(212,175,55,.15);
+}
+
+.video-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top, rgba(0,0,0,.45), transparent 55%);
+    opacity:0;
+    transition:opacity .3s ease;
+    pointer-events:none;
+}
+
+.video-card:hover::after{
+    opacity:1;
+}
+
+.video-card video{
+    width:100%;
+    display:block;
+    filter:brightness(.9);
+    transition:transform .3s ease, filter .3s ease;
+    position:relative;
+    z-index:2;
+    will-change: transform;
+}
+
+.video-card:hover video{
+    filter:brightness(1);
+    transform:scale(1.02);
+}
+
+/* SOL VE SAĞ VİDEO YERLEŞİMİ */
+.video-card:nth-child(1),
+.video-card:nth-child(3){
+    margin-top:120px;
+}
+
+.video-card:nth-child(1) video,
+.video-card:nth-child(3) video{
+    aspect-ratio:16/9;
+}
+
+/* ORTA VİDEO */
+.video-card:nth-child(2){
+    transform:scale(1.05);
+    z-index:2;
+}
+
+.video-card:nth-child(2) video{
+    aspect-ratio:9/16;
+}
+
+.video-card:nth-child(2):hover{
+    transform:scale(1.07) translateY(-6px);
+}
+
+/* MOBİL UYUM */
+@media(max-width:1000px){
+    .video-grid{
+        grid-template-columns:1fr;
+    }
+
+    .video-card:nth-child(1),
+    .video-card:nth-child(3){
+        margin-top:0;
+    }
+
+    .video-card:nth-child(2){
+        transform:none;
+    }
+
+    .video-card:nth-child(2):hover{
+        transform:translateY(-6px);
+    }
+
+    .video-card video{
+        aspect-ratio:16/9 !important;
+    }
+}

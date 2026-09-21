@@ -1,0 +1,115 @@
+/* ==========================
+   PRELOADER
+========================== */
+
+#preloader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#0b0b0b;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    transition:1s;
+
+}
+
+#preloader.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+.loader{
+
+    text-align:center;
+
+}
+
+.loader h1{
+
+    color:#d4af37;
+
+    font-size:60px;
+
+    letter-spacing:8px;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+.loader span{
+
+    display:block;
+
+    color:white;
+
+    letter-spacing:6px;
+
+    margin-top:8px;
+
+}
+
+.dots{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin-top:40px;
+
+}
+
+.dots div{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#d4af37;
+
+    animation:bounce 1s infinite;
+
+}
+
+.dots div:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+.dots div:nth-child(3){
+
+    animation-delay:.4s;
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}

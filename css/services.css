@@ -1,0 +1,122 @@
+/* ==========================
+   SERVICES
+========================== */
+
+.services{
+
+    padding:120px 0;
+    background:#111;
+
+}
+
+.services-title{
+
+    font-size:52px;
+    margin-top:15px;
+    text-align:center;
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+.services-text{
+
+    max-width:700px;
+    margin:20px auto 70px;
+    text-align:center;
+    color:#cfcfcf;
+    line-height:1.8;
+
+}
+
+.service-grid{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+
+}
+
+.service-card{
+
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:25px;
+    padding:40px 25px;
+    text-align:center;
+    transition:.35s;
+    backdrop-filter:blur(12px);
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-12px);
+    border-color:#d4af37;
+    box-shadow:0 25px 45px rgba(0,0,0,.35);
+
+}
+
+.icon{
+
+    font-size:48px;
+    margin-bottom:20px;
+
+}
+
+.service-card h3{
+
+    font-size:28px;
+    margin-bottom:15px;
+    color:#d4af37;
+
+}
+
+.service-card p{
+
+    color:#cfcfcf;
+    line-height:1.8;
+
+}
+/*=========================
+SERVICE EFFECT
+=========================*/
+
+.service-card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.service-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:0;
+
+height:4px;
+
+background:#d4af37;
+
+transition:.4s;
+
+}
+
+.service-card:hover::before{
+
+width:100%;
+
+}
+
+.service-card:hover{
+
+transform:translateY(-12px);
+
+}
